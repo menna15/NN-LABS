@@ -1,0 +1,16 @@
+cv2.cvtColor(src_img, code[, dst[, dstCn]]) ->	dst
+code: COLOR_RGB2GRAY
+----------------------------------------------------------------
+cv2.blur(src_img, kernel_size)
+put kernel_size= (3,3)
+----------------------------------------------------------------
+retVal, thresholded_img = cv2.threshold(src_img, min_value, max_value, cv2.THRESH_BINARY)
+----------------------------------------------------------------
+area = cv2.contourArea(contour)
+----------------------------------------------------------------
+x,y,w,h = cv2.boundingRect(contour)
+----------------------------------------------------------------
+center, radius = cv2.minEnclosingCircle(contour)
+----------------------------------------------------------------
+area,triangle = cv2.minEnclosingTriangle(contour)
+----------------------------------------------------------------
