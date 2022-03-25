@@ -1,0 +1,25 @@
+To read csv file
+rows = []
+with open(file_name, 'r') as file:
+        csvreader = csv.reader(file, delimiter=',')
+        for row in csvreader:
+            rows.append(row)
+--------------------------------------------------------------
+To cast an array using numpy
+np.array(array_name).astype(the_target_type)
+--------------------------------------------------------------
+To get the mean of the data (array of nD vectors)
+np.mean(data, axis=0)  //axis = 0 means average along the column and axis = 1 means average along the row
+
+--------------------------------------------------------------
+To get the covariance of the data
+np.cov(data.T) // The transpose to make array of 2 vectors (vector for the first feature and a vector for the second feature)
+-------------------------------------------------------------
+determinant of sigma: np.linalg.det(sigma)
+sigma inverse: np.linalg.pinv(sigma)
+subtract vectors: np.subtract ( X,Y)
+Subtract scalar "a" from vector: X - 3
+multiply matrices: np.matmul(A,B)
+----------------------------------------------------------------
+To get the number of matches where the values in Array1 = the values in Array2
+np.count_nonzero(Array1.reshape(-1) == Array2.reshape(-1)) // reshape(-1) to reshape the numpy array in 1D array
